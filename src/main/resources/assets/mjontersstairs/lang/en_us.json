@@ -1,0 +1,13 @@
+{
+  "itemGroup.mjontersstairs": "Example Mod Tab",
+  "block.mjontersstairs.example_block": "Example Block",
+  "item.mjontersstairs.example_item": "Example Item",
+
+  "mjontersstairs.configuration.title": "Stairs Configs",
+  "mjontersstairs.configuration.section.mjontersstairs.common.toml": "Stairs Configs",
+  "mjontersstairs.configuration.section.mjontersstairs.common.toml.title": "Stairs Configs",
+  "mjontersstairs.configuration.items": "Item List",
+  "mjontersstairs.configuration.logDirtBlock": "Log Dirt Block",
+  "mjontersstairs.configuration.magicNumberIntroduction": "Magic Number Text",
+  "mjontersstairs.configuration.magicNumber": "Magic Number"
+}
