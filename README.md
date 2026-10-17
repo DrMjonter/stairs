@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 Installation information
 =======
@@ -23,3 +24,7 @@ Additional Resources:
 ==========
 Community Documentation: https://docs.neoforged.net/  
 NeoForged Discord: https://discord.neoforged.net/
+=======
+# stairs
+This mod adds various anomalous structures and experiences in the minecraft world
+>>>>>>> 0ad2d60074e7f8654ab54120c807ee4818b0a013
