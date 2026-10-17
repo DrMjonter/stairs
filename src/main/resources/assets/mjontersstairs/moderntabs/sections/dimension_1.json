@@ -1,0 +1,13 @@
+{
+  "priority": 1,
+  "title": {
+    "text": {
+      "translate": "itemGroup.mjontersstairs.dimension_1"
+    },
+    "color": "#FFFFFF"
+  },
+  "banner": {
+    "sprite": "mjontersstairs:dimension_1",
+    "color": "#548C91"
+  }
+}

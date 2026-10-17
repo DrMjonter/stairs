@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "mjontersstairs:echo_stone_bricks"
+  },
+  "result": {
+    "id": "mjontersstairs:echo_stone_brick_slab",
+    "count": 2
+  }
+}

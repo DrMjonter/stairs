@@ -1,0 +1,7 @@
+{
+  "type": "mjontersstairs:garbage_collector",
+  "generator": {
+    "type": "mjontersstairs:garbage_collector",
+    "biome_source": {"type": "minecraft:fixed", "biome": "mjontersstairs:garbage_collector"}
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "com.notmjonter.stairs.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "client": [
+    "SoundPhysicsMixin",
+    "AudioChannelMixin",
+    "IrisUniformsMixin",
+    "GarageMusicMixin",
+    "MusicVolumeMixin",
+    "UnfinishedSunSkyMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "mixins": [
+    "FutureClockMixin",
+    "FuturePlayerSleepMixin",
+    "FutureSleepTimeMixin",
+    "FutureVillagerBedMixin",
+    "FutureVillagerFollowMixin",
+    "FutureWorldgenMixin",
+    "StaircaseEdgeMixin",
+    "MirrorWorldgenMixin",
+    "MirrorServerAccess",
+    "MirrorRegionAccess",
+    "MirrorRegionWriteMixin",
+    "MirrorEntryMixin",
+    "TickstormInteractionMixin",
+    "TickstormDamageMixin"
+  ]
+}

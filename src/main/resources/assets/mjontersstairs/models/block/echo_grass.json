@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "top": "mjontersstairs:block/echo_grass_top",
+    "side": "mjontersstairs:block/echo_grass_side",
+    "bottom": "mjontersstairs:block/echo_stone"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "mjontersstairs:echo_stone"
+  },
+  "result": {
+    "id": "mjontersstairs:polished_echo_stone",
+    "count": 1
+  }
+}

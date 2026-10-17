@@ -1,0 +1,18 @@
+{
+  "replace": false,
+  "values": [
+    "mjontersstairs:plastic_button",
+    "mjontersstairs:plastic_door",
+    "mjontersstairs:plastic_fence",
+    "mjontersstairs:plastic_fence_gate",
+    "mjontersstairs:plastic_log",
+    "mjontersstairs:plastic_planks",
+    "mjontersstairs:plastic_pressure_plate",
+    "mjontersstairs:plastic_slab",
+    "mjontersstairs:plastic_stairs",
+    "mjontersstairs:plastic_trapdoor",
+    "mjontersstairs:plastic_wood",
+    "mjontersstairs:stripped_plastic_log",
+    "mjontersstairs:stripped_plastic_wood"
+  ]
+}

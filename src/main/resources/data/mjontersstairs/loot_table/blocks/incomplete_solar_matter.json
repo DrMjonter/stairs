@@ -1,0 +1,1 @@
+{"type":"minecraft:block","pools":[{"rolls":1,"entries":[{"type":"minecraft:item","name":"mjontersstairs:incomplete_solar_matter"}],"conditions":[{"condition":"minecraft:survives_explosion"}]}]}

@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:flat_cache",
+  "argument": {
+    "type": "minecraft:noise",
+    "noise": "mjontersstairs:echo_basin_basins",
+    "xz_scale": 1,
+    "y_scale": 0
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "mjontersstairs:block/plastic_log",
+    "side": "mjontersstairs:block/plastic_log"
+  }
+}

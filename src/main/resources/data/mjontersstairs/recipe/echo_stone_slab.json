@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "#": {
+      "item": "mjontersstairs:echo_stone"
+    }
+  },
+  "pattern": [
+    "###"
+  ],
+  "result": {
+    "id": "mjontersstairs:echo_stone_slab",
+    "count": 6
+  }
+}

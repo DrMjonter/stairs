@@ -1,117 +1,79 @@
 package com.notmjonter.stairs;
 
-import org.slf4j.Logger;
-
-import com.mojang.logging.LogUtils;
-
-import net.minecraft.core.registries.BuiltInRegistries;
-import net.minecraft.core.registries.Registries;
-import net.minecraft.network.chat.Component;
-import net.minecraft.world.food.FoodProperties;
-import net.minecraft.world.item.BlockItem;
-import net.minecraft.world.item.CreativeModeTab;
-import net.minecraft.world.item.CreativeModeTabs;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.state.BlockBehaviour;
-import net.minecraft.world.level.material.MapColor;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.bus.api.IEventBus;
-import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.Mod;
-import net.neoforged.fml.config.ModConfig;
-import net.neoforged.fml.ModContainer;
-import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
+import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.common.NeoForge;
-import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
-import net.neoforged.neoforge.event.server.ServerStartingEvent;
-import net.neoforged.neoforge.registries.DeferredBlock;
-import net.neoforged.neoforge.registries.DeferredHolder;
-import net.neoforged.neoforge.registries.DeferredItem;
-import net.neoforged.neoforge.registries.DeferredRegister;
 
-// The value here should match an entry in the META-INF/neoforge.mods.toml file
 @Mod(Stairs.MODID)
 public class Stairs {
-    // Define mod id in a common place for everything to reference
     public static final String MODID = "mjontersstairs";
-    // Directly reference a slf4j logger
-    public static final Logger LOGGER = LogUtils.getLogger();
-    // Create a Deferred Register to hold Blocks which will all be registered under the "mjontersstairs" namespace
-    public static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(MODID);
-    // Create a Deferred Register to hold Items which will all be registered under the "mjontersstairs" namespace
-    public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(MODID);
-    // Create a Deferred Register to hold CreativeModeTabs which will all be registered under the "mjontersstairs" namespace
-    public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, MODID);
 
-    // Creates a new Block with the id "mjontersstairs:example_block", combining the namespace and path
-    public static final DeferredBlock<Block> EXAMPLE_BLOCK = BLOCKS.registerSimpleBlock("example_block", BlockBehaviour.Properties.of().mapColor(MapColor.STONE));
-    // Creates a new BlockItem with the id "mjontersstairs:example_block", combining the namespace and path
-    public static final DeferredItem<BlockItem> EXAMPLE_BLOCK_ITEM = ITEMS.registerSimpleBlockItem("example_block", EXAMPLE_BLOCK);
-
-    // Creates a new food item with the id "mjontersstairs:example_id", nutrition 1 and saturation 2
-    public static final DeferredItem<Item> EXAMPLE_ITEM = ITEMS.registerSimpleItem("example_item", new Item.Properties().food(new FoodProperties.Builder()
-            .alwaysEdible().nutrition(1).saturationModifier(2f).build()));
-
-    // Creates a creative tab with the id "mjontersstairs:example_tab" for the example item, that is placed after the combat tab
-    public static final DeferredHolder<CreativeModeTab, CreativeModeTab> EXAMPLE_TAB = CREATIVE_MODE_TABS.register("example_tab", () -> CreativeModeTab.builder()
-            .title(Component.translatable("itemGroup.mjontersstairs")) //The language key for the title of your CreativeModeTab
-            .withTabsBefore(CreativeModeTabs.COMBAT)
-            .icon(() -> EXAMPLE_ITEM.get().getDefaultInstance())
-            .displayItems((parameters, output) -> {
-                output.accept(EXAMPLE_ITEM.get());// Add the example item to the tab. For your own tabs, this method is preferred over the event
-            }).build());
-
-    // The constructor for the mod class is the first code that is run when your mod is loaded.
-    // FML will recognize some parameter types like IEventBus or ModContainer and pass them in automatically.
-    public Stairs(IEventBus modEventBus, ModContainer modContainer) {
-        // Register the commonSetup method for modloading
-        modEventBus.addListener(this::commonSetup);
-
-        // Register the Deferred Register to the mod event bus so blocks get registered
-        BLOCKS.register(modEventBus);
-        // Register the Deferred Register to the mod event bus so items get registered
-        ITEMS.register(modEventBus);
-        // Register the Deferred Register to the mod event bus so tabs get registered
-        CREATIVE_MODE_TABS.register(modEventBus);
-
-        // Register ourselves for server and other game events we are interested in.
-        // Note that this is necessary if and only if we want *this* class (Stairs) to respond directly to events.
-        // Do not add this line if there are no @SubscribeEvent-annotated functions in this class, like onServerStarting() below.
-        NeoForge.EVENT_BUS.register(this);
-
-        // Register the item to a creative tab
-        modEventBus.addListener(this::addCreative);
-
-        // Register our mod's ModConfigSpec so that FML can create and load the config file for us
-        modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
-    }
-
-    private void commonSetup(FMLCommonSetupEvent event) {
-        // Some common setup code
-        LOGGER.info("HELLO FROM COMMON SETUP");
-
-        if (Config.LOG_DIRT_BLOCK.getAsBoolean()) {
-            LOGGER.info("DIRT BLOCK >> {}", BuiltInRegistries.BLOCK.getKey(Blocks.DIRT));
-        }
-
-        LOGGER.info("{}{}", Config.MAGIC_NUMBER_INTRODUCTION.get(), Config.MAGIC_NUMBER.getAsInt());
-
-        Config.ITEM_STRINGS.get().forEach((item) -> LOGGER.info("ITEM >> {}", item));
-    }
-
-    // Add the example block item to the building blocks tab
-    private void addCreative(BuildCreativeModeTabContentsEvent event) {
-        if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
-            event.accept(EXAMPLE_BLOCK_ITEM);
-        }
-    }
-
-    // You can use SubscribeEvent and let the Event Bus discover methods to call
-    @SubscribeEvent
-    public void onServerStarting(ServerStartingEvent event) {
-        // Do something when the server starts
-        LOGGER.info("HELLO from server starting");
+    public Stairs(IEventBus modEventBus, net.neoforged.fml.ModContainer modContainer) {
+        modContainer.registerConfig(net.neoforged.fml.config.ModConfig.Type.CLIENT,
+                EchoReplayConfig.SPEC, Stairs.MODID + "-client.toml");
+        PlasticBlocks.initialize();
+        DimensionBlocks.initialize();
+        EchoListeningWells.FEATURES.register(modEventBus);
+        NeoForge.EVENT_BUS.addListener(EchoListeningWells::tick);
+        NeoForge.EVENT_BUS.addListener(EchoListeningWells::stopped);
+        NeoForge.EVENT_BUS.addListener(EchoBasinProgress::tick);
+        NeoForge.EVENT_BUS.addListener(EchoBasinProgress::stopped);
+        NeoForge.EVENT_BUS.addListener(EchoExitStaircases::tick);
+        NeoForge.EVENT_BUS.addListener(EchoExitStaircases::stopped);
+        NeoForge.EVENT_BUS.addListener(UnfinishedSunLighting::tick);
+        NeoForge.EVENT_BUS.addListener(TickstormWeather::tick);
+        NeoForge.EVENT_BUS.addListener(TickstormWeather::changedDimension);
+        NeoForge.EVENT_BUS.addListener(TickstormWeather::login);
+        NeoForge.EVENT_BUS.addListener(TickstormWeather::stopped);
+        EchoSounds.EVENTS.register(modEventBus);
+        EchoLava.initialize();
+        EchoLava.TYPES.register(modEventBus);
+        EchoLava.FLUIDS.register(modEventBus);
+        FutureReplays.ENTITIES.register(modEventBus);
+        modEventBus.addListener(FutureReplays::attributes);
+        NeoForge.EVENT_BUS.addListener(FutureReplays::tick);
+        NeoForge.EVENT_BUS.addListener(FutureReplays::stopped);
+        NeoForge.EVENT_BUS.addListener(PlasticBlocks::strip);
+        NeoForge.EVENT_BUS.addListener(StaircaseProtection::breakBlock);
+        NeoForge.EVENT_BUS.addListener(StaircaseProtection::placeBlock);
+        NeoForge.EVENT_BUS.addListener(StaircaseProtection::explosion);
+        NeoForge.EVENT_BUS.addListener(StaircaseProtection::piston);
+        NeoForge.EVENT_BUS.addListener(GarageTravel::tick);
+        NeoForge.EVENT_BUS.addListener(GarageTravel::stopped);
+        NeoForge.EVENT_BUS.addListener(FutureClock::loaded);
+        NeoForge.EVENT_BUS.addListener(FutureClock::tick);
+        NeoForge.EVENT_BUS.addListener(FutureClock::changedDimension);
+        NeoForge.EVENT_BUS.addListener(FutureClock::login);
+        NeoForge.EVENT_BUS.addListener(FutureClock::respawn);
+        NeoForge.EVENT_BUS.addListener(FutureClock::sleep);
+        NeoForge.EVENT_BUS.addListener(FutureClock::continueSleeping);
+        NeoForge.EVENT_BUS.addListener(FutureClock::sleepingTick);
+        NeoForge.EVENT_BUS.addListener(FutureFinale::tick);
+        NeoForge.EVENT_BUS.addListener(FutureFinale::stopped);
+        NeoForge.EVENT_BUS.addListener(FutureMobSpawns::joining);
+        NeoForge.EVENT_BUS.addListener(FutureMobSpawns::tick);
+        NeoForge.EVENT_BUS.addListener(FutureMobSpawns::stopped);
+        NeoForge.EVENT_BUS.addListener(FutureVillagerPrayer::tick);
+        NeoForge.EVENT_BUS.addListener(FutureVillagerPrayer::interact);
+        NeoForge.EVENT_BUS.addListener(FutureVillagerPrayer::interactSpecific);
+        NeoForge.EVENT_BUS.addListener(FutureVillagerReactions::damaged);
+        NeoForge.EVENT_BUS.addListener(FutureVillagerReactions::stopped);
+        NeoForge.EVENT_BUS.addListener(FutureContainment::tick);
+        NeoForge.EVENT_BUS.addListener(FutureContainment::stopped);
+        NeoForge.EVENT_BUS.addListener(MirrorSnapshots::tick);
+        NeoForge.EVENT_BUS.addListener(MirrorSnapshots::stopping);
+        NeoForge.EVENT_BUS.addListener(MirrorSnapshots::login);
+        NeoForge.EVENT_BUS.addListener(MirrorSnapshots::changedDimension);
+        GarageDimension.GENERATORS.register(modEventBus);
+        GarageDimension.BLOCKS.register(modEventBus);
+        FutureBlocks.BLOCKS.register(modEventBus);
+        FutureBlocks.ITEMS.register(modEventBus);
+        StairsCreativeTab.TABS.register(modEventBus);
+        StaircaseEffects.EFFECTS.register(modEventBus);
+        modEventBus.addListener(StaircaseEffects::registerPayloads);
+        NeoForge.EVENT_BUS.addListener(StaircaseEffects::playerTick);
+        NeoForge.EVENT_BUS.addListener(StaircaseEffects::jump);
+        NeoForge.EVENT_BUS.addListener(StairsCommands::register);
+        NeoForge.EVENT_BUS.addListener(StaircaseLifecycle::tick);
     }
 }

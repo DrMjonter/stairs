@@ -1,0 +1,8 @@
+{
+  "type": "mjontersstairs:echo_basin",
+  "generator": {
+    "type": "minecraft:noise",
+    "settings": "mjontersstairs:echo_basin",
+    "biome_source": {"type": "minecraft:fixed", "biome": "mjontersstairs:echo_basin"}
+  }
+}

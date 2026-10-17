@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "mjontersstairs:block/polished_echo_stone"
+  }
+}

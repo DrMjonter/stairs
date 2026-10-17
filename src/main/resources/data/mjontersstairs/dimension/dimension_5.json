@@ -1,0 +1,8 @@
+{
+  "type": "mjontersstairs:tickstorm",
+  "generator": {
+    "type": "mjontersstairs:tickstorm",
+    "biome_source": {"type": "minecraft:fixed", "biome": "minecraft:plains"},
+    "settings": "minecraft:overworld"
+  }
+}

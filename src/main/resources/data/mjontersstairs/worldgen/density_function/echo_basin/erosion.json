@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:add",
+  "argument1": {
+    "type": "minecraft:mul",
+    "argument1": -0.42,
+    "argument2": {
+      "type": "minecraft:abs",
+      "argument": {
+        "type": "minecraft:noise",
+        "noise": "mjontersstairs:echo_basin_erosion",
+        "xz_scale": 1.6,
+        "y_scale": 0.8
+      }
+    }
+  },
+  "argument2": {
+    "type": "minecraft:mul",
+    "argument1": -0.16,
+    "argument2": {
+      "type": "minecraft:abs",
+      "argument": {
+        "type": "minecraft:noise",
+        "noise": "mjontersstairs:echo_basin_chips",
+        "xz_scale": 1,
+        "y_scale": 1.2
+      }
+    }
+  }
+}

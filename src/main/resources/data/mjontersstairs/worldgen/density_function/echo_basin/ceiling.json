@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:add",
+  "argument1": {
+    "type": "minecraft:y_clamped_gradient",
+    "from_y": 0,
+    "to_y": 128,
+    "from_value": 0,
+    "to_value": 10.24
+  },
+  "argument2": {
+    "type": "minecraft:add",
+    "argument1": -8.64,
+    "argument2": {
+      "type": "minecraft:mul",
+      "argument1": -0.8,
+      "argument2": {
+        "type": "minecraft:flat_cache",
+        "argument": {
+          "type": "minecraft:noise",
+          "noise": "mjontersstairs:echo_basin_roof",
+          "xz_scale": 0.8,
+          "y_scale": 0
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "mjontersstairs:block/plastic_log_horizontal",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "mjontersstairs:block/plastic_log"
+    },
+    "axis=z": {
+      "model": "mjontersstairs:block/plastic_log_horizontal",
+      "x": 90
+    }
+  }
+}

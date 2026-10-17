@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "mjontersstairs:block/stripped_plastic_wood",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "mjontersstairs:block/stripped_plastic_wood"
+    },
+    "axis=z": {
+      "model": "mjontersstairs:block/stripped_plastic_wood",
+      "x": 90
+    }
+  }
+}

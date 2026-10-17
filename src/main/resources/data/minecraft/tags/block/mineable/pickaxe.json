@@ -1,0 +1,27 @@
+{
+  "replace": false,
+  "values": [
+    "mjontersstairs:echo_stone",
+    "mjontersstairs:dark_echo_stone",
+    "mjontersstairs:echo_lantern",
+    "mjontersstairs:echo_stone_stairs",
+    "mjontersstairs:echo_stone_slab",
+    "mjontersstairs:echo_stone_bricks",
+    "mjontersstairs:echo_stone_brick_stairs",
+    "mjontersstairs:echo_stone_brick_slab",
+    "mjontersstairs:polished_echo_stone",
+    "mjontersstairs:polished_echo_stone_stairs",
+    "mjontersstairs:polished_echo_stone_slab",
+    "mjontersstairs:chiseled_echo_stone",
+    "mjontersstairs:echo_grass",
+    "mjontersstairs:resonant_ore",
+    "mjontersstairs:mossy_plastic_cobblestone",
+    "mjontersstairs:mossy_plastic_cobblestone_slab",
+    "mjontersstairs:mossy_plastic_cobblestone_stairs",
+    "mjontersstairs:mossy_plastic_cobblestone_wall",
+    "mjontersstairs:plastic_cobblestone",
+    "mjontersstairs:plastic_cobblestone_slab",
+    "mjontersstairs:plastic_cobblestone_stairs",
+    "mjontersstairs:plastic_cobblestone_wall"
+  ]
+}

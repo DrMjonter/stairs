@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "mjontersstairs:block/echo_stone_slab"
+    },
+    "type=top": {
+      "model": "mjontersstairs:block/echo_stone_slab_top"
+    },
+    "type=double": {
+      "model": "mjontersstairs:block/echo_stone"
+    }
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/outer_stairs",
+  "textures": {
+    "bottom": "mjontersstairs:block/echo_stone_bricks",
+    "top": "mjontersstairs:block/echo_stone_bricks",
+    "side": "mjontersstairs:block/echo_stone_bricks"
+  }
+}

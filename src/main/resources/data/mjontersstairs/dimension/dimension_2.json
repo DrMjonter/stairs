@@ -1,0 +1,11 @@
+{
+  "type": "mjontersstairs:unfinished_sun",
+  "generator": {
+    "type": "mjontersstairs:unfinished_sun",
+    "biome_source": {
+      "type": "minecraft:multi_noise",
+      "preset": "minecraft:overworld"
+    },
+    "settings": "minecraft:overworld"
+  }
+}

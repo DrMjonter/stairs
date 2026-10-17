@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/button_inventory",
+  "textures": {
+    "texture": "mjontersstairs:block/plastic_planks"
+  }
+}

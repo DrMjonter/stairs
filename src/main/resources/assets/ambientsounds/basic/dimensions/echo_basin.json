@@ -1,0 +1,12 @@
+{
+  "name": "mjontersstairs_echo_basin",
+  "dimension-names": [
+    "mjontersstairs:dimension_3"
+  ],
+  "mute": true,
+  "rain": false,
+  "storm": false,
+  "biome-selector": {
+    "always": false
+  }
+}

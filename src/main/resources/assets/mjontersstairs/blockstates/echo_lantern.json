@@ -1,0 +1,20 @@
+{
+  "variants": {
+    "power=0": { "model": "mjontersstairs:block/echo_lantern_off" },
+    "power=1": { "model": "mjontersstairs:block/echo_lantern" },
+    "power=2": { "model": "mjontersstairs:block/echo_lantern" },
+    "power=3": { "model": "mjontersstairs:block/echo_lantern" },
+    "power=4": { "model": "mjontersstairs:block/echo_lantern" },
+    "power=5": { "model": "mjontersstairs:block/echo_lantern" },
+    "power=6": { "model": "mjontersstairs:block/echo_lantern" },
+    "power=7": { "model": "mjontersstairs:block/echo_lantern" },
+    "power=8": { "model": "mjontersstairs:block/echo_lantern" },
+    "power=9": { "model": "mjontersstairs:block/echo_lantern" },
+    "power=10": { "model": "mjontersstairs:block/echo_lantern" },
+    "power=11": { "model": "mjontersstairs:block/echo_lantern" },
+    "power=12": { "model": "mjontersstairs:block/echo_lantern" },
+    "power=13": { "model": "mjontersstairs:block/echo_lantern" },
+    "power=14": { "model": "mjontersstairs:block/echo_lantern" },
+    "power=15": { "model": "mjontersstairs:block/echo_lantern" }
+  }
+}

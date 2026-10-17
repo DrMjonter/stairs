@@ -1,0 +1,64 @@
+{
+  "type": "minecraft:add",
+  "argument1": {
+    "type": "minecraft:spline",
+    "spline": {
+      "coordinate": "mjontersstairs:echo_basin/basin_noise",
+      "points": [
+        {
+          "location": -0.41,
+          "value": 22,
+          "derivative": 0
+        },
+        {
+          "location": -0.29,
+          "value": 36,
+          "derivative": 0
+        },
+        {
+          "location": -0.16,
+          "value": 36,
+          "derivative": 0
+        },
+        {
+          "location": -0.04,
+          "value": 50,
+          "derivative": 0
+        },
+        {
+          "location": 0.09,
+          "value": 50,
+          "derivative": 0
+        },
+        {
+          "location": 0.21,
+          "value": 64,
+          "derivative": 0
+        },
+        {
+          "location": 0.34,
+          "value": 64,
+          "derivative": 0
+        },
+        {
+          "location": 0.46,
+          "value": 78,
+          "derivative": 0
+        }
+      ]
+    }
+  },
+  "argument2": {
+    "type": "minecraft:mul",
+    "argument1": 1.2,
+    "argument2": {
+      "type": "minecraft:flat_cache",
+      "argument": {
+        "type": "minecraft:noise",
+        "noise": "mjontersstairs:echo_basin_detail",
+        "xz_scale": 0.8,
+        "y_scale": 0
+      }
+    }
+  }
+}

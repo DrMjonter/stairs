@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "mjontersstairs:block/fake_wheat"
+  },
+  "render_type": "minecraft:cutout"
+}

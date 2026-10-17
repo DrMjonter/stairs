@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "mjontersstairs:mossy_plastic_cobblestone_slab",
+    "mjontersstairs:plastic_cobblestone_slab",
+    "mjontersstairs:plastic_slab",
+    "mjontersstairs:echo_stone_slab",
+    "mjontersstairs:echo_stone_brick_slab",
+    "mjontersstairs:polished_echo_stone_slab"
+  ]
+}

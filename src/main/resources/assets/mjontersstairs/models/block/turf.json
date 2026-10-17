@@ -1,0 +1,11 @@
+{
+  "parent": "minecraft:block/grass_block",
+  "render_type": "minecraft:cutout_mipped",
+  "textures": {
+    "particle": "mjontersstairs:block/turf_bottom",
+    "bottom": "mjontersstairs:block/turf_bottom",
+    "top": "mjontersstairs:block/turf_top",
+    "side": "mjontersstairs:block/turf_side",
+    "overlay": "mjontersstairs:block/turf_side_overlay"
+  }
+}

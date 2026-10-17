@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab",
+  "textures": {
+    "bottom": "mjontersstairs:block/plastic_planks",
+    "side": "mjontersstairs:block/plastic_planks",
+    "top": "mjontersstairs:block/plastic_planks"
+  }
+}
